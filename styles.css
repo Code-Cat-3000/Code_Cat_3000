@@ -1,0 +1,38 @@
+/* Устанавливаем шрифт, цвет фона и текста для всего сайта */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0c1527; /* Темный фон, как в вашей картинке */
+    color: #f0f8ff; /* Светлый текст */
+    text-align: center;
+}
+
+/* Стили для контейнера, чтобы центрировать контент */
+.container {
+    max-width: 900px;
+    margin: 40px auto; /* Отступ сверху и снизу */
+    padding: 20px;
+}
+
+/* Стили для заголовка */
+h1 {
+    color: #00bcd4; /* Яркий, технологичный голубой */
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.5); /* Добавляем свечение */
+}
+
+/* Стили для основной картинки */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Слегка закругляем углы */
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.7); /* Сильное свечение вокруг картинки */
+    transition: transform 0.3s ease; /* Добавляем эффект при наведении */
+}
+
+/* Эффект при наведении мышью */
+img:hover {
+    transform: scale(1.02); /* Чуть-чуть увеличиваем картинку */
+}
