@@ -41,17 +41,20 @@ nav {
 nav a {
     color: #00bcd4; 
     text-decoration: none; 
-    margin-left: 15px; 
-    font-size: 1.2em; /* Сделает текст чуть больше */
-    padding: 10px 20px; /* ЭТО СОЗДАЕТ ФОРМУ КНОПКИ */
-    border: 2px solid #00bcd4; /* Добавляет рамку */
-    border-radius: 25px; /* Закругляет углы */
+    margin-left: 30px; /* УВЕЛИЧЕННЫЙ ОТСТУП */
+    font-size: 1.2em; 
+    padding: 10px 20px; /* ДЕЛАЕТ ФОРМУ КНОПКИ */
+    border: 2px solid #00bcd4; 
+    border-radius: 25px; 
     transition: all 0.3s ease; 
-    display: inline-block; /* Важно для работы padding */
+    display: inline-block; 
 }
 
+/* Этот блок должен быть сразу после nav a */
 nav a:hover {
-    color: #ffffff; /* Ссылки светятся белым при наведении */
+    background-color: #00bcd4;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.7);
 }
 
 
