@@ -1,60 +1,81 @@
-/* Устанавливаем шрифт, цвет фона и текста для всего сайта */
+/* Основные стили страницы */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #0c1527; /* Темный фон, как в вашей картинке */
-    color: #f0f8ff; /* Светлый текст */
+    font-family: Arial, sans-serif;
     text-align: center;
+    margin: 0;
+    background-color: #0c1527; /* Темно-синий фон */
+    padding-top: 20px;
+    color: #ffffff; /* Белый цвет текста по умолчанию */
 }
 
-/* Стили для контейнера, чтобы центрировать контент */
+/* Контейнер для центрирования контента */
 .container {
     max-width: 900px;
-    margin: 40px auto; /* Отступ сверху и снизу */
+    margin: 0 auto;
     padding: 20px;
+    /* Убрали background-color: #1a2a44; чтобы фон был сплошным */
 }
 
-/* Стили для заголовка */
+/* Стили для основного заголовка */
 h1 {
-    color: #00bcd4; /* Яркий, технологичный голубой */
+    color: #00bcd4; /* Ярко-голубой цвет */
     font-size: 3em;
     margin-bottom: 20px;
-    text-shadow: 0 0 10px rgba(0, 188, 212, 0.5); /* Добавляем свечение */
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.7);
 }
 
-/* Стили для основной картинки */
-img {
- 
-
-/* Эффект при наведении мышью */
-img:hover {
-    transform: scale(1.02); /* Чуть-чуть увеличиваем картинку */
-
-}
-/* Новый стиль для навигационного меню */
+/* Стили для навигационного меню */
 nav {
-    text-align: right; /* Выравнивает текст (ссылки) по правому краю */
-    margin-bottom: 30px; /* Отступ от меню до заголовка/картинки */
+    text-align: right; /* Выравнивает меню справа */
+    margin-bottom: 30px; 
 }
 
+/* Стили для самих кнопок навигации */
 nav a {
-    color: #00bcd4; 
-    text-decoration: none; 
-    margin-left: 30px; /* УВЕЛИЧЕННЫЙ ОТСТУП */
-    font-size: 1.2em; 
-    padding: 10px 20px; /* ДЕЛАЕТ ФОРМУ КНОПКИ */
-    border: 2px solid #00bcd4; 
-    border-radius: 25px; 
-    transition: all 0.3s ease; 
-    display: inline-block; 
+    color: #00bcd4; /* Цвет текста кнопок */
+    text-decoration: none;
+    margin-left: 30px; /* Увеличенный отступ между кнопками */
+    font-size: 1.2em;
+    padding: 10px 20px; /* Создает форму кнопки */
+    border: 2px solid #00bcd4; /* Рамка кнопки */
+    border-radius: 25px; /* Закругленные углы */
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
-/* Этот блок должен быть сразу после nav a */
+/* Эффект при наведении на кнопки */
 nav a:hover {
-    background-color: #00bcd4;
-    color: #ffffff;
+    background-color: #00bcd4; /* Фон кнопки становится голубым */
+    color: #ffffff; /* Текст становится белым */
     box-shadow: 0 0 15px rgba(0, 188, 212, 0.7);
 }
 
+/* Стили для основной картинки (на главной странице) */
+img {
+    max-width: 300px; /* Делаем маленькой */
+    height: 300px;    /* Делаем квадратной */
+    object-fit: cover; /* Обрезаем, чтобы не искажалась */
+    border-radius: 50%; /* Делаем круглой */
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.5); /* Свечение */
+    border: 4px solid #00bcd4; /* Рамка */
+    margin: 30px auto;
+    display: block; 
+}
 
+/* Стили для элементов проектов (на странице projects.html) */
+.project-item {
+    margin: 40px 0;
+    text-align: left; /* Текст внутри проекта выравниваем влево */
+}
+
+/* Стили для ссылок внутри проектов */
+.project-item h2 a {
+    color: #00bcd4;
+    text-decoration: underline;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.project-item h2 a:hover {
+    color: #ffffff;
+}
