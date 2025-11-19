@@ -79,4 +79,41 @@ float: left; /* Перемещает картинку влево */
 .project-item h2 a:hover {
     color: #ffffff;
 }
+/* Стили для заголовка нового блока */
+h2 p {
+    font-size: 1.5em;
+    color: #00bcd4;
+    margin-top: 50px; /* Отступ от картинки */
+}
+
+/* Контейнер для всех кнопок-ссылок */
+.social-links {
+    display: flex; /* Располагает элементы в ряд */
+    justify-content: center; /* Центрирует кнопки */
+    gap: 15px; /* Расстояние между кнопками */
+    flex-wrap: wrap; 
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #00bcd4; /* Рамка вокруг всего блока */
+    border-radius: 15px;
+}
+
+/* Стили для каждой кнопки-иконки */
+.social-links .icon-btn {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #1a2a44; /* Темный фон кнопки */
+    padding: 10px 15px; 
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.social-links .icon-btn:hover {
+    background-color: #00bcd4; /* Голубой фон при наведении */
+    transform: translateY(-3px); /* Немного приподнимаем кнопку */
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);
+}
 
