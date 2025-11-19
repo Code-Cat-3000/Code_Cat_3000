@@ -1,128 +1,64 @@
-/* Основные стили страницы */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #0c1527; /* Темно-синий фон */
-    padding-top: 20px;
-    color: #ffffff; /* Белый цвет текста по умолчанию */
-}
-
-/* Контейнер для центрирования контента */
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    /* Убрали background-color: #1a2a44; чтобы фон был сплошным */
-}
-
-/* Стили для основного заголовка */
-h1 {
-    color: #00bcd4; /* Ярко-голубой цвет */
-    font-size: 3em;
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px rgba(0, 188, 212, 0.7);
-}
-
-/* Стили для навигационного меню */
-nav {
-    text-align: right; /* Выравнивает меню справа */
-    margin-bottom: 30px; 
-}
-
-/* Стили для самих кнопок навигации */
-nav a {
-    color: #00bcd4; /* Цвет текста кнопок */
-    text-decoration: none;
-    margin-left: 30px; /* Увеличенный отступ между кнопками */
-    font-size: 1.2em;
-    padding: 10px 20px; /* Создает форму кнопки */
-    border: 2px solid #00bcd4; /* Рамка кнопки */
-    border-radius: 25px; /* Закругленные углы */
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-/* Эффект при наведении на кнопки */
-nav a:hover {
-    background-color: #00bcd4; /* Фон кнопки становится голубым */
-    color: #ffffff; /* Текст становится белым */
-    box-shadow: 0 0 15px rgba(0, 188, 212, 0.7);
-}
-
-/* Стили для основной картинки (на главной странице) */
+/*
+ * =========================================================
+ * 1. СТИЛИ ДЛЯ КАРТИНКИ (img)
+ * Делает картинку круглой и заставляет ее "плавать" слева
+ * =========================================================
+*/
 img {
-    max-width: 300px; /* Уменьшаем максимальную ширину */
-    height: 300px; /* Делаем квадратной, чтобы стала круглой */
-    object-fit: cover; /* Важно: чтобы картинка не искажалась при обрезке */
-    border-radius: 50%; /* Делаем картинку круглой */
-    box-shadow: 0 0 20px rgba(0, 188, 212, 0.5); /* Немного свечения */
-    border: 4px solid #00bcd4; /* Добавляем тонкую голубую рамку */
-    margin: 30px auto; /* Центрируем и добавляем отступы */
-    display: block; /* Важно для центрирования и для того, чтобы контент начинался с новой строки */
+    max-width: 300px; /* Размер картинки */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%; /* Круглая форма */
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.5); 
+    border: 4px solid #00bcd4;
+    
+    /* ВАЖНО для двух колонок: */
+    margin: 30px 30px 30px 0; /* Отступ справа от картинки */
+    display: inline-block;
+    float: left; /* Перемещает картинку влево */
 }
 
-/* Стили для элементов проектов (на странице projects.html) */
-.project-item {
-    margin: 40px 0;
-    text-align: left; /* Текст внутри проекта выравниваем влево */
+/* * =========================================================
+ * 2. СТИЛИ ДЛЯ ПРАВОЙ КОЛОНКИ (.right-content)
+ * Отодвигает весь контент справа от картинки
+ * =========================================================
+*/
+.right-content {
+    margin-left: 350px; /* Отступ, чтобы блок начался СРАЗУ СПРАВА от картинки */
+    padding-top: 30px; /* Выравнивание по верхнему краю картинки */
 }
 
-/* Стили для ссылок внутри проектов */
-.project-item h2 a {
-    color: #00bcd4;
-    text-decoration: underline;
-    font-size: 1.5em;
-    transition: color 0.3s;
+/* * =========================================================
+ * 3. СТИЛИ ДЛЯ ПРИВЕТСТВЕННОГО ТЕКСТА (.greeting)
+ * Настраивает внешний вид текста в правой колонке
+ * =========================================================
+*/
+.greeting {
+    margin-top: 30px; 
+    margin-bottom: 50px;
+    padding: 10px 0;
+    text-align: left; /* Убираем центрирование */
 }
 
-.project-item h2 a:hover {
+.greeting h1 {
+    font-size: 2.5em; 
     color: #ffffff;
-}
-/* Стили для заголовка нового блока */
-h2 p {
-    font-size: 1.5em;
-    color: #00bcd4;
-    margin-top: 50px; /* Отступ от картинки */
+    margin-bottom: 10px;
 }
 
-/* Контейнер для всех кнопок-ссылок */
-.social-links {
-    display: flex; /* Располагает элементы в ряд */
-    justify-content: center; /* Центрирует кнопки */
-    gap: 15px; /* Расстояние между кнопками */
-    flex-wrap: wrap; 
-    max-width: 700px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 2px solid #00bcd4; /* Рамка вокруг всего блока */
-    border-radius: 15px;
+.greeting p {
+    font-size: 1.1em;
+    color: #bdbdbd; 
+    margin: 5px 0; 
 }
 
-/* Стили для каждой кнопки-иконки */
-.social-links .icon-btn {
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #1a2a44; /* Темный фон кнопки */
-    padding: 10px 15px; 
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.3s;
-    font-size: 1em;
-    font-weight: bold;
-}
-
-.social-links .icon-btn:hover {
-    background-color: #00bcd4; /* Голубой фон при наведении */
-    transform: translateY(-3px); /* Немного приподнимаем кнопку */
-    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);
-}
-/* Дополнительный стиль для выделения важного текста */
+/* Стили для выделенного текста (class="main-info") */
 .greeting .main-info {
-    font-size: 1.25em; /* Делаем крупнее */
-    color: #00bcd4; /* Голубой цвет для привлечения внимания */
-    margin: 20px auto;
+    font-size: 1.25em;
+    color: #00bcd4; 
+    margin: 20px 0; 
     padding: 15px;
-    border: 1px solid #00bcd4; /* Тонкая рамка вокруг текста */
-    max-width: 700px;
+    border: 1px solid #00bcd4;
+    max-width: 100%; /* Занимает всю ширину правой колонки */
     border-radius: 10px;
 }
-
