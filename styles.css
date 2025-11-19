@@ -93,12 +93,12 @@ img {
 /* Стили для выделенного текста (class="main-info") */
 .greeting .main-info {
     font-size: 1.25em;
-    color: #00bcd4; 
+    color: #00bcd4; /* Голубой цвет останется для выделения */
     margin: 20px 0; 
-    padding: 15px;
-    border: 1px solid #00bcd4;
+    padding: 0; /* Убираем внутренний отступ, который был для рамки */
+    /* border: none; Убрали рамку! */
     max-width: 100%; 
-    border-radius: 10px;
+    border-radius: 0;
 }
 
 /* =========================================================
@@ -177,3 +177,4 @@ h2 {
     color: #bdbdbd;
     margin-top: 10px;
 }
+
