@@ -115,5 +115,14 @@ h2 p {
     transform: translateY(-3px); /* Немного приподнимаем кнопку */
     box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);
 }
-
+/* Дополнительный стиль для выделения важного текста */
+.greeting .main-info {
+    font-size: 1.25em; /* Делаем крупнее */
+    color: #00bcd4; /* Голубой цвет для привлечения внимания */
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #00bcd4; /* Тонкая рамка вокруг текста */
+    max-width: 700px;
+    border-radius: 10px;
+}
 
