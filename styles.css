@@ -177,4 +177,36 @@ h2 {
     color: #bdbdbd;
     margin-top: 10px;
 }
+/* СТИЛИ ДЛЯ РАЗДЕЛА "В РАЗРАБОТКЕ" */
+
+/* Заголовок для раздела "В разработке" */
+.under-development-heading {
+    color: #ffd700; /* Золотистый или оранжевый цвет, чтобы выделить */
+    margin-top: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Измененный стиль для карточек проектов "В разработке" */
+.project-item.in-progress {
+    border: 1px dashed #ffd700; /* Пунктирная рамка */
+    opacity: 0.8; /* Немного приглушим */
+    background-color: #0c1527; /* Немного более темный фон */
+}
+
+/* Убираем эффект при наведении, чтобы не путать с готовыми проектами */
+.project-item.in-progress:hover {
+    background-color: #0c1527; 
+}
+
+/* Стили для текста внутри проектов "В разработке" */
+.project-item.in-progress h2 {
+    color: #ffd700;
+}
+
+/* Убираем ссылки внутри проектов "В разработке" (они же не готовы) */
+.project-item.in-progress a {
+    text-decoration: none; 
+    cursor: default; /* Курсор не будет показывать, что это ссылка */
+}
 
