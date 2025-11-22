@@ -231,10 +231,15 @@ h2 {
     background-color: #1a2a44; 
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* НЕМНОГО УВЕЛИЧИМ ТЕНЬ */
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    /* УБЕЖДАЕМСЯ, ЧТО НЕТ MIN-HEIGHT */
+    
+    /* НОВОЕ: СЛЕГКА ПРИПОДНИМАЕМ КАРТОЧКУ В ОБЫЧНОМ СОСТОЯНИИ */
+    transform: translateY(-2px); 
+    
+    /* НОВОЕ: ДОБАВЛЯЕМ СЛАБОЕ СВЕЧЕНИЕ (ОБЫЧНЫЙ СТИЛЬ) */
+    border: 1px solid rgba(0, 188, 212, 0.2); 
 }
 
 /* Стили для иконок внутри карточек инструментов */
@@ -280,3 +285,4 @@ h2 {
     transform: translateY(-5px); 
     box-shadow: 0 8px 20px rgba(0, 188, 212, 0.6); 
 }
+
