@@ -226,6 +226,39 @@ h2 {
     gap: 30px;
     margin-top: 40px;
 }
+
+.tool-card {
+    background-color: #1a2a44; 
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* УБЕЖДАЕМСЯ, ЧТО НЕТ MIN-HEIGHT */
+}
+
+/* Стили для иконок внутри карточек инструментов */
+.tool-card i {
+    color: #ffd700; 
+    margin-bottom: 20px;
+    display: block; 
+}
+
+.tool-card h2 {
+    color: #ffffff;
+    font-size: 1.4em;
+    margin: 10px 0;
+}
+
+/* Стили для описания внутри карточки */
+.tool-card p {
+    color: #bdbdbd;
+    min-height: 40px; 
+    margin-top: 10px;
+    margin-bottom: 15px;
+    /* ВАЖНО: УБРАТЬ ПОДЧЕРКИВАНИЕ И РОЗОВЫЙ ЦВЕТ С ТЕКСТА КАРТОЧЕК */
+}
+
 /* =========================================================
  * СТИЛИ ДЛЯ КЛИКАБЕЛЬНЫХ КАРТОЧЕК (tool-card-link)
  * =========================================================
@@ -233,25 +266,17 @@ h2 {
 
 /* Стили для ссылки вокруг всей карточки */
 .tool-card-link {
-    text-decoration: none; /* Убираем подчеркивание */
-    color: inherit;
+    text-decoration: none; /* <-- ГЛАВНОЕ: УБРАТЬ ПОДЧЕРКИВАНИЕ! */
+    color: inherit; /* <-- ГЛАВНОЕ: УБРАТЬ ЦВЕТ ССЫЛКИ С ТЕКСТА! */
 }
 
 .tool-card-link .tool-card {
-    /* Чтобы курсор показывал, что элемент кликабельный */
-    cursor: pointer; 
-    /* Возвращаем эффект перехода, если был удален */
+    cursor: pointer; /* Курсор-указатель */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 /* Эффект наведения на кликабельную карточку (делаем ее "кнопкой") */
 .tool-card-link:hover .tool-card {
     transform: translateY(-5px); 
-    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.6); /* Яркое голубое свечение */
+    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.6); 
 }
-
-/* На случай, если вы удаляли стили nav a, их нужно оставить */
-nav a {
-    text-decoration: none;
-}
-
