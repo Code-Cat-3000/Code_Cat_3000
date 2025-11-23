@@ -317,49 +317,31 @@ h2 {
     width: 100%; /* Растягивает плеер на всю ширину карточки */
 }
 /* =========================================================
- * СТИЛИ ДЛЯ НИЖНЕЙ НАВИГАЦИИ НА ГЛАВНОЙ СТРАНИЦЕ
- * =========================================================
-*/
-/* =========================================================
- * СТИЛИ ДЛЯ НИЖНЕЙ НАВИГАЦИИ НА ГЛАВНОЙ СТРАНИЦЕ
+ * ФИНАЛЬНЫЕ СТИЛИ: НИЖНЯЯ НАВИГАЦИЯ (Сетка 3х2 и уменьшение размера)
  * =========================================================
 */
 .bottom-navigation-grid {
     display: grid;
-    /* Уменьшаем минимальный размер карточки (было 200px) и делаем 3 колонки */
+    /* Устанавливаем 3 колонки */
     grid-template-columns: repeat(3, 1fr); 
-    gap: 15px; /* Уменьшаем расстояние между карточками (было 20px) */
+    gap: 15px; 
     margin-top: 50px; 
     margin-bottom: 20px;
 }
 
-/* Изменим стили для самой кнопки, чтобы сделать её меньше */
+/* Стили для самой кнопки: уменьшение размера */
 .bottom-nav-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     text-decoration: none;
-    padding: 15px 10px; /* Уменьшаем внутренние отступы (было 25px 15px) */
+    padding: 15px 10px; /* Уменьшенные отступы */
     background-color: #1a2a44; 
-    border-radius: 10px; /* Немного уменьшим скругление */
+    border-radius: 10px; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s, box-shadow 0.3s;
-    height: 100%; /* Гарантирует одинаковую высоту, если вы добавите больше кнопок */
-}
-
-/* Уменьшим иконки */
-.bottom-nav-item i {
-    color: #ffd700; 
-    font-size: 2em; /* Уменьшаем размер иконки (было 3em) */
-    margin-bottom: 5px;
-}
-
-/* Уменьшим текст */
-.bottom-nav-item span {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 1em; /* Уменьшаем размер шрифта (было 1.2em) */
+    height: 100%; 
 }
 
 .bottom-nav-item:hover {
@@ -367,3 +349,15 @@ h2 {
     box-shadow: 0 8px 20px rgba(0, 188, 212, 0.6); 
 }
 
+/* Уменьшение иконок и текста */
+.bottom-nav-item i {
+    color: #ffd700; 
+    font-size: 2em; /* Уменьшенный размер иконки */
+    margin-bottom: 5px;
+}
+
+.bottom-nav-item span {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1em; /* Уменьшенный текст */
+}
