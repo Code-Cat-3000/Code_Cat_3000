@@ -306,7 +306,37 @@ h2 {
     margin-top: 0;
     margin-bottom: 5px;
 }
+/* --- СТИЛИ ДЛЯ ВСТРОЕННОГО AUDIO-ПЛЕЕРА (РАБОЧИЙ МЕТОД) --- */
 
+.dark-audio {
+    width: 100%;
+    margin-top: 15px;
+    /* Убеждаемся, что фон самого контейнера темный */
+    background-color: #0c1527; 
+}
+
+/* Затемняем все встроенные элементы плеера */
+.dark-audio::-webkit-media-controls-panel {
+    background-color: #1a2336 !important; /* Темный фон панели */
+    color: #ffd700 !important; /* Золотой цвет текста/иконок */
+}
+
+/* Цвет ползунка (прогресса) */
+.dark-audio::-webkit-media-controls-timeline {
+    background-color: #3b4255;
+}
+
+/* Цвет воспроизведенной части */
+.dark-audio::-webkit-media-controls-current-time-display,
+.dark-audio::-webkit-media-controls-time-remaining-display {
+    color: #ffd700; 
+}
+
+/* Цвет кнопок (Play/Pause/Mute) */
+.dark-audio::-webkit-media-controls-play-button,
+.dark-audio::-webkit-media-controls-mute-button {
+    color: #ffffff;
+}
 .sound-item p {
     color: #bdbdbd;
     font-size: 0.9em;
@@ -367,53 +397,7 @@ h2 {
     font-weight: bold;
     font-size: 1em; /* Уменьшенный текст */
 }
-/* =========================================================
- * СТИЛИ ДЛЯ КАСТОМНОГО АУДИОПЛЕЕРА (для темной темы)
- * =========================================================
-*/
-.custom-audio-player {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #0c1527; /* Темный фон плеера */
-    padding: 8px 15px;
-    border-radius: 50px; 
-    border: 1px solid #00bcd4;
-}
 
-.play-btn, .download-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    color: #ffd700; /* Золотой цвет для иконок */
-    font-size: 1.2em;
-    transition: color 0.2s;
-}
-
-.play-btn:hover, .download-btn:hover {
-    color: #ffffff;
-}
-
-.download-btn {
-    font-size: 1em;
-}
-
-.track-info {
-    flex-grow: 1;
-    height: 6px;
-    background-color: #1a2a44; /* Темно-синий фон полосы */
-    border-radius: 3px;
-    position: relative;
-    overflow: hidden;
-}
-
-.progress-bar {
-    width: 0%; 
-    height: 100%;
-    background-color: #00bcd4; /* Голубая полоса прогресса */
-    border-radius: 3px;
-}
 /* --- СТИЛИ ДЛЯ ВСТРОЕННОГО AUDIO-ПЛЕЕРА (ТЕСТ) --- */
 .sound-item audio {
     width: 100%;
@@ -422,4 +406,5 @@ h2 {
     filter: invert(80%) hue-rotate(180deg); 
     opacity: 0.8;
 }
+
 
