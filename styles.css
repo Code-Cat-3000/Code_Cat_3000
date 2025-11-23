@@ -414,4 +414,12 @@ h2 {
     background-color: #00bcd4; /* Голубая полоса прогресса */
     border-radius: 3px;
 }
+/* --- СТИЛИ ДЛЯ ВСТРОЕННОГО AUDIO-ПЛЕЕРА (ТЕСТ) --- */
+.sound-item audio {
+    width: 100%;
+    margin-top: 15px;
+    /* Затемняем плеер */
+    filter: invert(80%) hue-rotate(180deg); 
+    opacity: 0.8;
+}
 
