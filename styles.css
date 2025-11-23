@@ -367,4 +367,51 @@ h2 {
     font-weight: bold;
     font-size: 1em; /* Уменьшенный текст */
 }
+/* =========================================================
+ * СТИЛИ ДЛЯ КАСТОМНОГО АУДИОПЛЕЕРА (для темной темы)
+ * =========================================================
+*/
+.custom-audio-player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #0c1527; /* Темный фон плеера */
+    padding: 8px 15px;
+    border-radius: 50px; 
+    border: 1px solid #00bcd4;
+}
+
+.play-btn, .download-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #ffd700; /* Золотой цвет для иконок */
+    font-size: 1.2em;
+    transition: color 0.2s;
+}
+
+.play-btn:hover, .download-btn:hover {
+    color: #ffffff;
+}
+
+.download-btn {
+    font-size: 1em;
+}
+
+.track-info {
+    flex-grow: 1;
+    height: 6px;
+    background-color: #1a2a44; /* Темно-синий фон полосы */
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%; 
+    height: 100%;
+    background-color: #00bcd4; /* Голубая полоса прогресса */
+    border-radius: 3px;
+}
 
