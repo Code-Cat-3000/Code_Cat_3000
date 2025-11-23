@@ -320,13 +320,19 @@ h2 {
  * ФИНАЛЬНЫЕ СТИЛИ: НИЖНЯЯ НАВИГАЦИЯ (Сетка 3х2 и уменьшение размера)
  * =========================================================
 */
-.bottom-navigation-grid {
+/* Добавьте это в конец файла styles.css */
+.bottom-navigation-grid-simple {
     display: grid;
-    /* Устанавливаем 3 колонки */
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 15px; 
+    /* Устанавливаем 2 колонки, чтобы выглядело аккуратно */
+    grid-template-columns: repeat(2, minmax(200px, 1fr)); 
+    gap: 20px; 
     margin-top: 50px; 
     margin-bottom: 20px;
+}
+
+/* Применяем стили меньших кнопок к этой новой сетке */
+.bottom-navigation-grid-simple .bottom-nav-item {
+    /* Если вы хотите, чтобы они были как маленькие кнопки, стили из .bottom-nav-item будут применены. */
 }
 
 /* Стили для самой кнопки: уменьшение размера */
@@ -361,3 +367,4 @@ h2 {
     font-weight: bold;
     font-size: 1em; /* Уменьшенный текст */
 }
+
