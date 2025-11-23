@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Звуки для Игр | Code_Cat_3000</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
 </head>
 <body>
     <div class="container">
@@ -73,5 +75,46 @@
     </div>
      </div>
      </div>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const players = document.querySelectorAll('.sound-item');
+            
+            players.forEach((player) => {
+                const playButton = player.querySelector('.play-btn');
+                const downloadLink = player.querySelector('.download-btn');
+                const progressBar = player.querySelector('.progress-bar');
+
+                // Создаем невидимый аудио-элемент для воспроизведения
+                // Используем адрес из кнопки скачивания
+                const audio = new Audio(downloadLink.href);
+
+                let isPlaying = false;
+
+                playButton.addEventListener('click', () => {
+                    if (isPlaying) {
+                        audio.pause();
+                        playButton.innerHTML = '<i class="fa-solid fa-play"></i>'; // Показываем PLAY
+                    } else {
+                        audio.play();
+                        playButton.innerHTML = '<i class="fa-solid fa-pause"></i>'; // Показываем PAUSE
+                    }
+                    isPlaying = !isPlaying;
+                });
+
+                // Обновление полосы прогресса
+                audio.addEventListener('timeupdate', () => {
+                    const progress = (audio.currentTime / audio.duration) * 100;
+                    progressBar.style.width = ${progress}%;
+                });
+
+                // Сброс при окончании
+                audio.addEventListener('ended', () => {
+                    playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                    isPlaying = false;
+                    progressBar.style.width = '0%';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
