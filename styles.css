@@ -316,3 +316,45 @@ h2 {
 .sound-item audio {
     width: 100%; /* Растягивает плеер на всю ширину карточки */
 }
+/* =========================================================
+ * СТИЛИ ДЛЯ НИЖНЕЙ НАВИГАЦИИ НА ГЛАВНОЙ СТРАНИЦЕ
+ * =========================================================
+*/
+.bottom-navigation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Выстраивает кнопки в ряд */
+    gap: 20px;
+    margin-top: 50px; /* Отступ от основного контента */
+    margin-bottom: 20px;
+}
+
+.bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    padding: 25px 15px;
+    background-color: #1a2a44; /* Темный фон, как у карточек */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bottom-nav-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.6); 
+}
+
+/* Иконки и текст в нижней навигации */
+.bottom-nav-item i {
+    color: #ffd700; /* Желтый цвет иконки */
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.bottom-nav-item span {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2em;
+}
