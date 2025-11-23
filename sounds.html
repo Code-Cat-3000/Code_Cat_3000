@@ -76,45 +76,52 @@
      </div>
      </div>
         <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const players = document.querySelectorAll('.sound-item');
+    document.addEventListener('DOMContentLoaded', () => {
+        const players = document.querySelectorAll('.sound-item');
+        
+        players.forEach((player) => {
+            const playButton = player.querySelector('.play-btn');
+            const downloadLink = player.querySelector('.download-btn');
+            const progressBar = player.querySelector('.progress-bar');
             
-            players.forEach((player) => {
-                const playButton = player.querySelector('.play-btn');
-                const downloadLink = player.querySelector('.download-btn');
-                const progressBar = player.querySelector('.progress-bar');
+            // Берем URL из атрибута href, который у вас ГАРАНТИРОВАННО работает
+            const audioUrl = downloadLink.getAttribute('href'); 
+            const audio = new Audio(audioUrl); // Создаем аудио-объект
 
-                // Создаем невидимый аудио-элемент для воспроизведения
-                // Используем адрес из кнопки скачивания
-                const audio = new Audio(downloadLink.href);
+            let isPlaying = false;
 
-                let isPlaying = false;
+            playButton.addEventListener('click', () => {
+                
+                if (!audioUrl) return; // Если ссылки нет, ничего не делаем
 
-                playButton.addEventListener('click', () => {
-                    if (isPlaying) {
-                        audio.pause();
-                        playButton.innerHTML = '<i class="fa-solid fa-play"></i>'; // Показываем PLAY
-                    } else {
-                        audio.play();
-                        playButton.innerHTML = '<i class="fa-solid fa-pause"></i>'; // Показываем PAUSE
-                    }
-                    isPlaying = !isPlaying;
-                });
+                if (isPlaying) {
+                    audio.pause();
+                    playButton.innerHTML = '<i class="fa-solid fa-play"></i>'; // Показываем PLAY
+                } else {
+                    audio.play().catch(error => {
+                        // Эта строка нужна, чтобы обойти блокировку браузера, если пользователь не взаимодействовал со страницей
+                        console.error("Audio playback blocked:", error); 
+                        alert("Чтобы начать воспроизведение, пожалуйста, нажмите 'Play' еще раз.");
+                    });
+                    playButton.innerHTML = '<i class="fa-solid fa-pause"></i>'; // Показываем PAUSE
+                }
+                isPlaying = !isPlaying;
+            });
 
-                // Обновление полосы прогресса
-                audio.addEventListener('timeupdate', () => {
-                    const progress = (audio.currentTime / audio.duration) * 100;
-                    progressBar.style.width = ${progress}%;
-                });
+            // Обновление полосы прогресса
+            audio.addEventListener('timeupdate', () => {
+                const progress = (audio.currentTime / audio.duration) * 100;
+                progressBar.style.width = ${progress}%;
+            });
 
-                // Сброс при окончании
-                audio.addEventListener('ended', () => {
-                    playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
-                    isPlaying = false;
-                    progressBar.style.width = '0%';
-                });
+            // Сброс при окончании
+            audio.addEventListener('ended', () => {
+                playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                isPlaying = false;
+                progressBar.style.width = '0%';
             });
         });
-    </script>
+    });
+</script>
 </body>
 </html>
