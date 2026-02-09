@@ -229,21 +229,25 @@ h2 {
     margin-top: 40px;
 }
 
-.tool-card {
-    background-color: #1a2a44; /* Твоя подложка */
-    
-    /* Уменьшаем отступы: первое число (высота), второе (ширина) */
-    padding: 5px 15px; 
-    
-    /* Чтобы подложка не была на весь экран, а облегала текст */
-    display: inline-block; 
-    width: auto;           
-    
-    border-radius: 12px;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+/* Эта штука перестанет растягивать подложки на всю ширину */
+.tools-grid {
+    display: flex;          /* Меняем grid на flex */
+    flex-wrap: wrap;        /* Чтобы карточки переносились */
+    justify-content: center; /* Центрируем их */
+    gap: 20px;
+    margin-top: 40px;
 }
 
+/* Сама подложка становится худенькой */
+.tool-card {
+    background-color: #1a2a44;
+    padding: 10px 20px;     /* Уменьшаем отступы сверху и снизу */
+    border-radius: 15px;
+    text-align: center;
+    width: 180px;           /* ФИКСИРУЕМ ШИРИНУ, чтобы не была длинной */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
 /* Стили для иконок внутри карточек инструментов */
 .tool-card i {
     color: #ffd700; 
@@ -408,6 +412,7 @@ h2 {
     filter: invert(80%) hue-rotate(180deg); 
     opacity: 0.8;
 }
+
 
 
 
