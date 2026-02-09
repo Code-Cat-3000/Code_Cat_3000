@@ -229,24 +229,17 @@ h2 {
     margin-top: 40px;
 }
 
-/* Эта штука перестанет растягивать подложки на всю ширину */
-.tools-grid {
-    display: flex;          /* Меняем grid на flex */
-    flex-wrap: wrap;        /* Чтобы карточки переносились */
-    justify-content: center; /* Центрируем их */
-    gap: 20px;
-    margin-top: 40px;
-}
-
-/* Сама подложка становится худенькой */
 .tool-card {
     background-color: #1a2a44;
-    padding: 10px 20px;     /* Уменьшаем отступы сверху и снизу */
+    padding: 10px 15px;      /* Сделали отступы меньше, чтобы кнопка была худенькой */
     border-radius: 15px;
     text-align: center;
-    width: 180px;           /* ФИКСИРУЕМ ШИРИНУ, чтобы не была длинной */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s;
+    
+    /* ВОТ ЭТО ГЛАВНОЕ: */
+    display: inline-block;   /* Чтобы кнопка облегала текст, а не растягивалась */
+    min-width: 120px;        /* Минимальная ширина, чтобы не была слишком мелкой */
+    width: auto;             /* Автоматическая ширина по тексту */
 }
 /* Стили для иконок внутри карточек инструментов */
 .tool-card i {
@@ -412,6 +405,7 @@ h2 {
     filter: invert(80%) hue-rotate(180deg); 
     opacity: 0.8;
 }
+
 
 
 
