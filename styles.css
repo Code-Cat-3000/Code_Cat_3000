@@ -31,7 +31,7 @@ nav a {
     text-decoration: none;
     margin-left: 15px;
     font-size: 1.1em;
-    padding: 10px 20px;
+    padding: 5px 15px; /* Уменьшили высоту с 10 до 5 */
     border: 2px solid #00bcd4;
     border-radius: 25px;
     transition: all 0.3s ease;
@@ -406,5 +406,6 @@ h2 {
     filter: invert(80%) hue-rotate(180deg); 
     opacity: 0.8;
 }
+
 
 
