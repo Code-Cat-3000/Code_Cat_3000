@@ -30,12 +30,14 @@ nav a {
     color: #00bcd4;
     text-decoration: none;
     margin-left: 15px;
-    font-size: 1.1em;
-    padding: 5px 15px; /* Уменьшили высоту с 10 до 5 */
+    font-size: 1.0em;       /* Немного уменьшил шрифт */
+    padding: 4px 12px;      /* Ещё сильнее уменьшил отступы */
+    line-height: 1;         /* Убирает лишнюю высоту строки */
     border: 2px solid #00bcd4;
-    border-radius: 25px;
+    border-radius: 20px;    /* Сделал закругление аккуратнее */
     transition: all 0.3s ease;
     display: inline-block;
+    width: auto;            /* Гарантирует, что кнопка не растянется */
 }
 
 nav a:hover {
@@ -406,6 +408,7 @@ h2 {
     filter: invert(80%) hue-rotate(180deg); 
     opacity: 0.8;
 }
+
 
 
 
