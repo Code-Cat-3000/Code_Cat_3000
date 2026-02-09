@@ -231,15 +231,14 @@ h2 {
 
 .tool-card {
     background-color: #1a2a44;
-    padding: 10px 20px;       /* Уменьшили высоту и ширину внутри */
+    padding: 10px 15px;      /* Узкие отступы */
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s;
-
-    /* ГЛАВНАЯ СТРОЧКА ТУТ: */
-    width: fit-content;       /* Подложка сожмется ровно по размеру текста! */
-    margin: 10px auto;        /* Центрирует карточку */
+    
+    /* ВОТ ЭТО ЗАСТАВИТ ЕЁ СЖАТЬСЯ ВНУТРИ СЕТКИ: */
+    width: fit-content;      
+    justify-self: center;    
 }
 /* Стили для иконок внутри карточек инструментов */
 .tool-card i {
@@ -405,6 +404,7 @@ h2 {
     filter: invert(80%) hue-rotate(180deg); 
     opacity: 0.8;
 }
+
 
 
 
