@@ -221,11 +221,11 @@ h2 {
  * =========================================================
 */
 
-/* Сетка для расположения карточек */
 .tools-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2-3 колонки */
-    gap: 30px;
+    display: flex;          /* Было grid, стало flex */
+    flex-wrap: wrap;        /* Чтобы кнопки переносились на новую строку */
+    justify-content: center; /* Центрируем их */
+    gap: 20px;
     margin-top: 40px;
 }
 
@@ -405,6 +405,7 @@ h2 {
     filter: invert(80%) hue-rotate(180deg); 
     opacity: 0.8;
 }
+
 
 
 
