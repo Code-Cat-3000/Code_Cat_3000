@@ -231,15 +231,15 @@ h2 {
 
 .tool-card {
     background-color: #1a2a44;
-    padding: 10px 15px;      /* Сделали отступы меньше, чтобы кнопка была худенькой */
+    padding: 10px 20px;       /* Уменьшили высоту и ширину внутри */
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-    
-    /* ВОТ ЭТО ГЛАВНОЕ: */
-    display: inline-block;   /* Чтобы кнопка облегала текст, а не растягивалась */
-    min-width: 120px;        /* Минимальная ширина, чтобы не была слишком мелкой */
-    width: auto;             /* Автоматическая ширина по тексту */
+    transition: transform 0.3s;
+
+    /* ГЛАВНАЯ СТРОЧКА ТУТ: */
+    width: fit-content;       /* Подложка сожмется ровно по размеру текста! */
+    margin: 10px auto;        /* Центрирует карточку */
 }
 /* Стили для иконок внутри карточек инструментов */
 .tool-card i {
@@ -405,6 +405,7 @@ h2 {
     filter: invert(80%) hue-rotate(180deg); 
     opacity: 0.8;
 }
+
 
 
 
