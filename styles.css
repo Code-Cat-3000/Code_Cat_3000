@@ -230,18 +230,18 @@ h2 {
 }
 
 .tool-card {
-    background-color: #1a2a44; 
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* НЕМНОГО УВЕЛИЧИМ ТЕНЬ */
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #1a2a44; /* Твоя подложка */
     
-    /* НОВОЕ: СЛЕГКА ПРИПОДНИМАЕМ КАРТОЧКУ В ОБЫЧНОМ СОСТОЯНИИ */
-    transform: translateY(-2px); 
+    /* Уменьшаем отступы: первое число (высота), второе (ширина) */
+    padding: 5px 15px; 
     
-    /* НОВОЕ: ДОБАВЛЯЕМ СЛАБОЕ СВЕЧЕНИЕ (ОБЫЧНЫЙ СТИЛЬ) */
-    border: 1px solid rgba(0, 188, 212, 0.2); 
+    /* Чтобы подложка не была на весь экран, а облегала текст */
+    display: inline-block; 
+    width: auto;           
+    
+    border-radius: 12px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Стили для иконок внутри карточек инструментов */
@@ -408,6 +408,7 @@ h2 {
     filter: invert(80%) hue-rotate(180deg); 
     opacity: 0.8;
 }
+
 
 
 
